@@ -1,0 +1,52 @@
+\documentclass[a4paper,12pt]{article}
+
+\input{Header}
+
+\begin{document}
+	
+	% =========================
+	% Deckblatt (ohne Kopfzeile)
+	% =========================
+	%\pagestyle{empty}
+	
+	\input{Deckblatt}
+	
+	\clearpage
+	% =========================
+	% Inhaltsverzeichnis
+	% =========================
+	\pagestyle{empty}
+	\tableofcontents
+	\clearpage
+	% =========================
+	% Kopf- und Fußzeilen nach dem Inhaltsverzeichnis
+	% =========================
+	\pagestyle{fancy}
+	\fancyhf{}
+	% Kopfzeile
+	\fancyhead[L]{\includegraphics[height=1 cm]{logoHSEL.png}}
+	\fancyhead[R]{\small \nouppercase{\leftmark}}
+	% Fußzeile
+	\fancyfoot[L]{\small \today}
+	\fancyfoot[C]{\small Hausarbeit Rapid Prototyping}
+	\fancyfoot[R]{\small \thepage}
+	% Linien
+	\renewcommand{\headrulewidth}{0.4pt}
+	\renewcommand{\footrulewidth}{0.4pt}
+	\setlength{\headheight}{32pt}
+	% =========================
+	% Hauptteil
+	% =========================
+	\input{0_Kapitel/Einleitung}
+
+	% =========================
+	% Literatur
+	% =========================
+	\clearpage
+	\pagenumbering{roman}
+	\printbibliography[heading=bibintoc]
+	\clearpage
+	\addcontentsline{toc}{section}{Tabellenverzeichnis}
+	\listoftables
+	%hallo
+\end{document}

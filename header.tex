@@ -1,0 +1,33 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{makecell}
+\usepackage{rotating}
+\usepackage{cellspace}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{caption}
+
+\graphicspath{{1_Abbildungen/}}
+\sisetup{locale = DE}
+
+\usepackage{fancyhdr}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% ===== biblatex einbinden =====
+\usepackage[
+backend=biber,        % moderner Bib-Processor
+style=numeric,        % nummeriertes Zitat [1]
+sorting=none,         % Reihenfolge wie im Text
+]{biblatex}
+
+\addbibresource{2_Quellen/literatur.bib} % Pfad zu deiner Bib-Datei
+
