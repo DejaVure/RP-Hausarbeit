@@ -1,10 +1,6 @@
 \section{Konstruktive Umsetzung}
 
-\begin{comment}
-	\textcolor{red}{Sollte enthalten: Toleranzen für die jeweiligen Bauteile (M33 bis M10 unterscheiden sich stark in Passung), Wandstärken/Druckorientierung mit Begründung (FDM oder SLA?), Befestigung auf der Glasplatte (Kleben, Reibschluss, Sockel), und wie die Beschriftung technisch gelöst wird (eingeprägt/graviert vs. separates Schild wie bei den bestehenden QR-Code-Etiketten in Abb. 1 – Konsistenz zur Vitrine beachten).}
-\end{comment}
-
-Für die Herstellung der Bauteile wurde das FDM-Verfahren mit den in Tabelle~\ref{tab:Prozessparameter für die Herstellung der Bauteile} aufgeführten Prozessparametern und Materialien verwendet.
+Für die Herstellung der Bauteile wurde das FDM-Verfahren mit den in Tab.~\ref{tab:Prozessparameter für die Herstellung der Bauteile} aufgeführten Prozessparametern und Materialien verwendet.
 
 \begin{table}[H]
 	\centering
@@ -27,9 +23,10 @@ Für die Herstellung der Bauteile wurde das FDM-Verfahren mit den in Tabelle~\re
 	\end{tabular}
 \end{table}
 
-Um möglichst viel Filament einzusparen, wurden die Bauteile so konstruiert und auf dem Druckbett ausgerichtet, dass bis auf die Adapter für die Sicherungen keine Stützstrukturen benötigt werden. Dies wurde dadurch erreicht, dass die Neigungen der Bauteile einen Winkel von 45° nicht unterschreiten und Übergänge, soweit möglich, durch Schrägen ausgeführt wurden. Für alle Bauteile, die ineinandergesteckt oder aufgesteckt werden, wurden Toleranzen von 0,1--0,3\,mm berücksichtigt.
+Um möglichst viel Filament einzusparen, wurden die Bauteile so konstruiert und auf dem Druckbett ausgerichtet, dass bis auf die Adapter für die Sicherungen keine Stützstrukturen benötigt werden. Dies wurde dadurch erreicht, dass die Neigungen der Bauteile einen Winkel von 45° nicht unterschreiten und Übergänge, soweit möglich, durch Schrägen ausgeführt wurden. Für alle Bauteile, die ineinander gesteckt oder aufgesteckt werden, wurden Toleranzen von 0,1--0,3\,mm berücksichtigt.
 
-Für die Informationstexte wurde der Slicer von Prusa verwendet. Dafür wurde eine unbeschriftete Platte mit den Abmaßen 150\,x\,30\,mm für die Schraubenbeschriftung und eine Platte mit den Abmaßen 90\,x\,20\,mm für die Sicherungen als Grundplatte in den Slicer importiert. In die Platten wurden zusätzlich Einlassungen konstruiert, um die QR-Codes zur Internetseite des Maschinenelemente-Labors einzuklemmen (siehe Abb.~\ref{fig:Platte in Fusion}). Dies wurde umgesetzt, da es technisch nicht möglich war, einen QR-Code in einer für die Platte geeigneten Größe direkt auf die Platte zu drucken und gleichzeitig eine ausreichende Lesbarkeit sicherzustellen.
+Für die Informationstexte wurde der Slicer von Prusa verwendet. Dafür wurde eine unbeschriftete Platte mit den Abmaßen 150\,x\,30\,mm für die Schraubenbeschriftung und eine Platte mit den Abmaßen 90\,x\,20\,mm für die Sicherungen als Grundplatte in den Slicer importiert. Anschließend wurden die gewünschten Beschriftungen mit der Funktion ``Text'' auf die Platten aufgetragen. Um einen farblichen Kontrast zur Grundplatte zu schaffen, wurde ab der ersten Schicht der Beschriftung ein Farbwechsel eingeplant.
+
 
 \begin{figure}[H]
 	\centering
@@ -38,7 +35,7 @@ Für die Informationstexte wurde der Slicer von Prusa verwendet. Dafür wurde ei
 	\label{fig:Platte in Fusion}
 \end{figure}
 
-Die leeren Platten wurden anschließend in den Slicer importiert. Mit der Funktion ``Text'' wurden die Informationen zu den Schrauben und Sicherungen auf die Platten projiziert. Um einen farblichen Kontrast zur Grundplatte zu schaffen, wurde ab der ersten Schicht der Beschriftung ein Farbwechsel eingeplant.
+In die Platten wurden zusätzlich Einlassungen konstruiert, um die QR-Codes zur Internetseite des Maschinenelemente-Labors einzuklemmen (siehe Abb.~\ref{fig:Platte in Fusion}). Dies wurde umgesetzt, da es technisch nicht möglich war, die QR-Codes in einer für die Platte geeigneten Größe direkt auf die Platten aufzubringen und gleichzeitig eine ausreichende Lesbarkeit sicherzustellen.
 
 \begin{figure}[H]
 	\centering
@@ -84,7 +81,7 @@ Die Grundfläche der gesamten Halterung beträgt 150\,x\,87\,mm. Da die Haltearm
 
 \subsection{Halter für die Wellensicherungen}
 
-Von den Sicherungen sind jeweils zwei Exemplare im Schaukasten vorhanden. Daher wurde eine Basis gewählt, bei der jeweils eine Sicherungsart in der Frontansicht angeordnet wird und die zweite Ausführung in der Seitenansicht daneben hängt. Die Platte mit dem Informationstext wird ähnlich wie bei der Schraubenhalterung in die Stützen der Basis eingesteckt (siehe Abb.~\ref{fig:Basis_Sicherungen}).
+Von den Sicherungen sind jeweils zwei Exemplare in der Glasvitrine vorhanden. Daher wurde eine Basis gewählt, bei der jeweils eine Sicherungsart in der Frontansicht angeordnet wird und die zweite Ausführung in der Seitenansicht daneben hängt. Die Platte mit dem Informationstext wird ähnlich wie bei der Schraubenhalterung in die Stützen der Basis eingesteckt (siehe Abb.~\ref{fig:Basis_Sicherungen}).
 
 \begin{figure}[H]
 	\centering
@@ -102,7 +99,7 @@ Um auch hier die Möglichkeit zu schaffen, verschiedene Sicherungselemente mit u
 	\label{fig:Adapter_Sicherungen}
 \end{figure}
 
-Die Abmaße der Halterung betragen 43,34\,x\,33\,x\,30,24\,mm. Das fertige CAD-Modell für den Halter der Wellensicherungen ist in Abb. \ref{fig:wellensicherungHalter} zu sehen.
+Die Maße der Halterung betragen 43,34\,x\,33\,x\,30,24\,mm. Das fertige CAD-Modell für den Halter der Wellensicherungen ist in Abb. \ref{fig:wellensicherungHalter} zu sehen.
 
 \begin{figure}[H]
 	\centering

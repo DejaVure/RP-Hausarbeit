@@ -4,6 +4,8 @@
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
 
+\usepackage{pdfpages}  
+
 \usepackage{subcaption}
 \renewcommand{\thesubfigure}{\arabic{subfigure}}
 
@@ -30,11 +32,15 @@
 \setlength{\parskip}{0pt}
 
 % ===== biblatex einbinden =====
-\usepackage[
-backend=biber,        % moderner Bib-Processor
-style=numeric,        % nummeriertes Zitat [1]
-sorting=none,         % Reihenfolge wie im Text
-]{biblatex}
+\usepackage[style=authoryear, backend=biber]{biblatex}
+
+% Zitierformat auf Nur-Norm-Kennung umstellen
+\DeclareFieldFormat{cite}{\mkbibparens{#1}}
+\renewbibmacro*{cite}{%
+	\printfield{number}%
+	\setunit{\addcolon\addspace}%
+	\printfield{year}%
+}
 
 \addbibresource{2_Quellen/literatur.bib} % Pfad zu deiner Bib-Datei
 
