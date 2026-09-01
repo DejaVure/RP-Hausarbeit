@@ -1,44 +1,59 @@
 \section{Konstruktive Umsetzung}
+
 \begin{comment}
-\textcolor{red}{Sollte enthalten: Toleranzen für die jeweiligen Bauteile (M33 bis M10 unterscheiden sich stark in Passung), Wandstärken/Druckorientierung mit Begründung (FDM oder SLA?), Befestigung auf der Glasplatte (Kleben, Reibschluss, Sockel), und wie die Beschriftung technisch gelöst wird (eingeprägt/graviert vs. separates Schild wie bei den bestehenden QR-Code-Etiketten in Abb. 1 – Konsistenz zur Vitrine beachten).}
+	\textcolor{red}{Sollte enthalten: Toleranzen für die jeweiligen Bauteile (M33 bis M10 unterscheiden sich stark in Passung), Wandstärken/Druckorientierung mit Begründung (FDM oder SLA?), Befestigung auf der Glasplatte (Kleben, Reibschluss, Sockel), und wie die Beschriftung technisch gelöst wird (eingeprägt/graviert vs. separates Schild wie bei den bestehenden QR-Code-Etiketten in Abb. 1 – Konsistenz zur Vitrine beachten).}
 \end{comment}
 
-Damit die Schrauben einfach aus den Halterungen entnommen werden können wurden die Haltearme der Schrauben Halterung immer 0,5 mm im Durchmesser größer gemacht. für die Sicherungen wurden die Halterung genau auf den Durchmesser konstruiert, da alle Sicherung in doppelter Ausführung vorliegen.\\
+Für die Herstellung der Bauteile wurde das FDM-Verfahren mit den in Tab.~\ref{tab:Prozessparameter für die Herstellung der Bauteile} aufgeführten Prozessparametern und Materialien verwendet.
 
-Für die Herstellung der Bauteile wurde das FDM-Verfahren verwendet. Der Infil der Bauteil beträgt 15\%. Di
 \begin{table}[H]
 	\centering
-	\caption{Anforderungsliste}
+	\caption{Prozessparameter für die Herstellung der Bauteile}
 	\label{tab:Prozessparameter für die Herstellung der Bauteile}
 	\begin{tabular}{c|c}		
-		\textbf{Prozessparameter} & \textbf{Wert/Einstellung } \\
+		\textbf{Prozessparameter} & \textbf{Wert/Einstellung} \\
 		\hline
-		Filament  & PLA Prusa Galaxy Black  \\
+		Hauptfilament & PLA Prusa Galaxy Black \\
 		\hline
-		Drucktemperaturen & Düse 215 °C, Druckbrett 60°C \\
+		Schriftfilament & PLA Weiß \\
 		\hline
-		Schichten  & Max. 0,2 mm hoch und breit \\
+		Drucktemperaturen & Düse 215\,°C, Druckbett 60\,°C \\
 		\hline
-		Druckqualität  & hoch \\
+		Infill & 15\,\% \\
+		\hline
+		Schichthöhe & max. 0,2\,mm \\
+		\hline
+		Druckqualität & hoch \\
 	\end{tabular}
 \end{table}
 
-Um so gut es geht an Filament zu Sparen wurden die Bauteile so Konstruiert und auf dem Druckbrett ausgerichtet das bis auf die "{Adapter}"\ für die Sicherungen keine Stützstrukturen verwendet werden müssen. Dies wurde bewerkstelligt in dem alle Neigungen der Bauteile den Winkel von 45° nicht unterschreiten und Übergänge durch Schrägen vermieden wurde. Für alle Bauteile die Ineinander oder aufgesteckt werden wurden Toleranzen von 0,1 - 0,3 [mm] berücksichtigt.\\
+Um möglichst viel Filament einzusparen, wurden die Bauteile so konstruiert und auf dem Druckbett ausgerichtet, dass bis auf die Adapter für die Sicherungen keine Stützstrukturen benötigt werden. Dies wurde dadurch erreicht, dass die Neigungen der Bauteile einen Winkel von 45° nicht unterschreiten und Übergänge, soweit möglich, durch Schrägen ausgeführt wurden. Für alle Bauteile, die ineinandergesteckt oder aufgesteckt werden, wurden Toleranzen von 0,1--0,3\,mm berücksichtigt.
 
-Für die Info texte wurde der Firmeneigene Slicer von Prusa genutzt. Dafür wurde eine unbeschriftete Platte mit den Abmaßen 150 x 30 mm für die Schraubenbeschriftung und 80 x 20 mm für die Sicherungen als Grund platte in den Slicer importiert. In die Platten wurden Einlassungen konstruiert um laminierte QR-Codes ein zu klemmen. Dies wurde gemacht da es technisch nicht möglich war ein QR-Code Lesbar auf die Platte zu bringen.\\
+Für die Informationstexte wurde der Slicer von Prusa verwendet. Dafür wurde eine unbeschriftete Platte mit den Abmaßen 150\,x\,30\,mm für die Schraubenbeschriftung und eine Platte mit den Abmaßen 90\,x\,20\,mm für die Sicherungen als Grundplatte in den Slicer importiert. In die Platten wurden zusätzlich Einlassungen konstruiert, um die QR-Codes zur Internetseite des Maschinenelemente-Labors einzuklemmen (siehe Abb.~\ref{fig:Platte in Fusion}). Dies wurde umgesetzt, da es technisch nicht möglich war, einen QR-Code in einer für die Platte geeigneten Größe direkt auf die Platte zu drucken und gleichzeitig eine ausreichende Lesbarkeit sicherzustellen.
 
-Die Leeren Platten wurden in den Slicer Importiert und mit der Funktion "{Text}"\ wurden die Information zu den Schrauben und Sicherungen auf die Platte projiziert. Um ein Farblichen Kontrast zur Grundplatte zu schaffen wurde ein Farbwechsel, ab der ersten Schriftschicht eingeplant. 
-\\
-\textcolor{red}{HIER BILD MIT ALLEN BESCHRIFTEN PLATEN IM SLICER }
-\\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\linewidth]{Platte in Fusion.png}
+	\caption{Platte für die Sicherungen mit Einlassung zum Einklemmen von QR-Codes}
+	\label{fig:Platte in Fusion}
+\end{figure}
 
-   
+Die leeren Platten wurden anschließend in den Slicer importiert. Mit der Funktion ``Text'' wurden die Informationen zu den Schrauben und Sicherungen auf die Platten projiziert. Um einen farblichen Kontrast zur Grundplatte zu schaffen, wurde ab der ersten Schicht der Beschriftung ein Farbwechsel eingeplant.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\linewidth]{Beschriftete Platten im Slicer .png}
+	\caption{Beschriftete Platten für die Sicherungen im Slicer}
+	\label{fig:Platen im Slicer}
+\end{figure}
+
+%//////////////////////////////////////////////////////////////////////////////////
 
 \subsection{Halter für die Schrauben}
 
-Um die Möglichkeit zu haben bei einem Tausch oder Hinzufügen von unterschiedlichen Schraubenlängen nicht alles neu Konstruieren muss, wurde die Basis des Schraubenhalters mit einer Schiene konstruiert diese ermöglicht die Einstellung unterschiedlicher abstände (siehe Abb. \ref{fig:Schrauben_Basis}).\\
+Um die Möglichkeit zu schaffen, bei einem Tausch oder Hinzufügen von Schrauben mit unterschiedlichen Längen nicht die gesamte Halterung neu konstruieren zu müssen, wurde die Basis des Schraubenhalters mit einer Schiene konstruiert. Diese ermöglicht die Einstellung unterschiedlicher Abstände (siehe Abb.~\ref{fig:Schrauben_Basis}).
 
-Um die Platten mit dem Infotext halten zu können, wurden die "{Arme}"\ der Basis mit Schrägen Einkerbungen versehen diese ermöglichen das einsetzen von Platten.  (siehe Abb. \ref{fig:Schrauben_Basis}).
+Um die Platten mit den Informationstexten halten zu können, wurden die Arme der Basis mit schrägen Einkerbungen versehen. Diese ermöglichen das Einsetzen und Halten der Platten (siehe Abb.~\ref{fig:Schrauben_Basis}).
 
 \begin{figure}[H]
 	\centering
@@ -47,18 +62,22 @@ Um die Platten mit dem Infotext halten zu können, wurden die "{Arme}"\ der Basi
 	\label{fig:Schrauben_Basis}
 \end{figure}
 
-Um auch Verschiedene Schraubendurchmesser ausstellen zu können wurde ein Muster Model erstellt in dem man den gewünschten Durchmesser eingeben kann. Durch die Schienen an der Basis und dem Gegenstück an den Haltearmen können die arme einfach umgetauscht werden.
+Um auch verschiedene Schraubendurchmesser ausstellen zu können, wurde für die Haltearme ein Mustermodell erstellt. In diesem Modell kann der gewünschte Durchmesser direkt in der Skizze eingegeben werden, woraufhin die restlichen Maße automatisch angepasst werden. Durch die Schienen an der Basis und die entsprechenden Gegenstücke an den Haltearmen können die Haltearme einfach ausgetauscht werden.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.4\linewidth]{Haltearme_Schrauben.png}
-	\caption{Haltearme der Schrauben für die Unterschiedlichen Schraubendurchmesser}
+	\caption{Haltearme der Schrauben für die unterschiedlichen Schraubendurchmesser}
 	\label{fig:Haltearme_Schrauben}
 \end{figure}
 
+Die Grundfläche der gesamten Halterung beträgt 150\,x\,87\,mm. Da die Haltearme mit unterschiedlichen Durchmessern auch unterschiedlich hoch sind, liegt die Höhe der Halterung zwischen 46,62\,mm für die M16-Schraube und 60,25\,mm für die M33-Dehnschraube.
+
+%//////////////////////////////////////////////////////////////////////////////////
+
 \subsection{Halter für die Wellensicherungen}
 
-Von den Sicherungen sind alle doppelter Ausführung im Schaukasten weswegen eine Basis gewählt wurde wo jeweils eine Sicherungsart in der Frontansicht liegt und die zweite Ausführung in der Seitenansicht daneben hängt. Die Platte mit dem Infotext wird Ähnlich zu der Schraubenhalterung in die Stützen der Basis eingesteckt (siehe Abb. \ref{fig:Basis_Sicherungen})
+Von den Sicherungen sind jeweils zwei Exemplare im Schaukasten vorhanden. Daher wurde eine Basis gewählt, bei der jeweils eine Sicherungsart in der Frontansicht angeordnet wird und die zweite Ausführung in der Seitenansicht daneben hängt. Die Platte mit dem Informationstext wird ähnlich wie bei der Schraubenhalterung in die Stützen der Basis eingesteckt (siehe Abb.~\ref{fig:Basis_Sicherungen}).
 
 \begin{figure}[H]
 	\centering
@@ -67,11 +86,13 @@ Von den Sicherungen sind alle doppelter Ausführung im Schaukasten weswegen eine
 	\label{fig:Basis_Sicherungen}
 \end{figure}
 
-Um auch hier die Möglichkeit zu haben verschiedene Sicherungselemente mit Unterschiedlichen Durchmessern ausstellen zu können kann man sog. Adapter (siehe Abb.\ref{fig:Adapter_Sicherungen})in das Loch der Basis steckten. Die Adapter wurden so konstruiert das entweder möglichst viele Details der Sicherung zu sehen sind oder sie den Einsatz dieser Sicherungen andeuten.  
+Um auch hier die Möglichkeit zu schaffen, verschiedene Sicherungselemente mit unterschiedlichen Durchmessern ausstellen zu können, werden sogenannte Adapter (siehe Abb.~\ref{fig:Adapter_Sicherungen}) in die Öffnung der Basis gesteckt. Die Adapter wurden so konstruiert, dass entweder möglichst viele Details der jeweiligen Sicherung sichtbar sind oder die vorgesehene Verwendung der Sicherung angedeutet wird.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.4\linewidth]{Adapter_Sicherungen.png}
-	\caption{Passende Adapter für die Auszustellenden Sicherungen}
+	\caption{Passende Adapter für die auszustellenden Sicherungen}
 	\label{fig:Adapter_Sicherungen}
 \end{figure}
+
+Die Abmaße der Halterung betragen 43,34\,x\,33\,x\,30,24\,mm.
