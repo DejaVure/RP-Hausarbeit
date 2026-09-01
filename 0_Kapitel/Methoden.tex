@@ -1,5 +1,77 @@
 \section{Konstruktive Umsetzung}
+\begin{comment}
 \textcolor{red}{Sollte enthalten: Toleranzen für die jeweiligen Bauteile (M33 bis M10 unterscheiden sich stark in Passung), Wandstärken/Druckorientierung mit Begründung (FDM oder SLA?), Befestigung auf der Glasplatte (Kleben, Reibschluss, Sockel), und wie die Beschriftung technisch gelöst wird (eingeprägt/graviert vs. separates Schild wie bei den bestehenden QR-Code-Etiketten in Abb. 1 – Konsistenz zur Vitrine beachten).}
+\end{comment}
+
+Damit die Schrauben einfach aus den Halterungen entnommen werden können wurden die Haltearme der Schrauben Halterung immer 0,5 mm im Durchmesser größer gemacht. für die Sicherungen wurden die Halterung genau auf den Durchmesser konstruiert, da alle Sicherung in doppelter Ausführung vorliegen.\\
+
+Für die Herstellung der Bauteile wurde das FDM-Verfahren verwendet. Der Infil der Bauteil beträgt 15\%. Di
+\begin{table}[H]
+	\centering
+	\caption{Anforderungsliste}
+	\label{tab:Prozessparameter für die Herstellung der Bauteile}
+	\begin{tabular}{c|c}		
+		\textbf{Prozessparameter} & \textbf{Wert/Einstellung } \\
+		\hline
+		Filament  & PLA Prusa Galaxy Black  \\
+		\hline
+		Drucktemperaturen & Düse 215 °C, Druckbrett 60°C \\
+		\hline
+		Schichten  & Max. 0,2 mm hoch und breit \\
+		\hline
+		Druckqualität  & hoch \\
+	\end{tabular}
+\end{table}
+
+Um so gut es geht an Filament zu Sparen wurden die Bauteile so Konstruiert und auf dem Druckbrett ausgerichtet das bis auf die "{Adapter}"\ für die Sicherungen keine Stützstrukturen verwendet werden müssen. Dies wurde bewerkstelligt in dem alle Neigungen der Bauteile den Winkel von 45° nicht unterschreiten und Übergänge durch Schrägen vermieden wurde. Für alle Bauteile die Ineinander oder aufgesteckt werden wurden Toleranzen von 0,1 - 0,3 [mm] berücksichtigt.\\
+
+Für die Info texte wurde der Firmeneigene Slicer von Prusa genutzt. Dafür wurde eine unbeschriftete Platte mit den Abmaßen 150 x 30 mm für die Schraubenbeschriftung und 80 x 20 mm für die Sicherungen als Grund platte in den Slicer importiert. In die Platten wurden Einlassungen konstruiert um laminierte QR-Codes ein zu klemmen. Dies wurde gemacht da es technisch nicht möglich war ein QR-Code Lesbar auf die Platte zu bringen.\\
+
+Die Leeren Platten wurden in den Slicer Importiert und mit der Funktion "{Text}"\ wurden die Information zu den Schrauben und Sicherungen auf die Platte projiziert. Um ein Farblichen Kontrast zur Grundplatte zu schaffen wurde ein Farbwechsel, ab der ersten Schriftschicht eingeplant. 
+\\
+\textcolor{red}{HIER BILD MIT ALLEN BESCHRIFTEN PLATEN IM SLICER }
+\\
+
+   
 
 \subsection{Halter für die Schrauben}
+
+Um die Möglichkeit zu haben bei einem Tausch oder Hinzufügen von unterschiedlichen Schraubenlängen nicht alles neu Konstruieren muss, wurde die Basis des Schraubenhalters mit einer Schiene konstruiert diese ermöglicht die Einstellung unterschiedlicher abstände (siehe Abb. \ref{fig:Schrauben_Basis}).\\
+
+Um die Platten mit dem Infotext halten zu können, wurden die "{Arme}"\ der Basis mit Schrägen Einkerbungen versehen diese ermöglichen das einsetzen von Platten.  (siehe Abb. \ref{fig:Schrauben_Basis}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\linewidth]{Basis_Schrauben.png}
+	\caption{Basis des Schraubenhalters}
+	\label{fig:Schrauben_Basis}
+\end{figure}
+
+Um auch Verschiedene Schraubendurchmesser ausstellen zu können wurde ein Muster Model erstellt in dem man den gewünschten Durchmesser eingeben kann. Durch die Schienen an der Basis und dem Gegenstück an den Haltearmen können die arme einfach umgetauscht werden.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\linewidth]{Haltearme_Schrauben.png}
+	\caption{Haltearme der Schrauben für die Unterschiedlichen Schraubendurchmesser}
+	\label{fig:Haltearme_Schrauben}
+\end{figure}
+
 \subsection{Halter für die Wellensicherungen}
+
+Von den Sicherungen sind alle doppelter Ausführung im Schaukasten weswegen eine Basis gewählt wurde wo jeweils eine Sicherungsart in der Frontansicht liegt und die zweite Ausführung in der Seitenansicht daneben hängt. Die Platte mit dem Infotext wird Ähnlich zu der Schraubenhalterung in die Stützen der Basis eingesteckt (siehe Abb. \ref{fig:Basis_Sicherungen})
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\linewidth]{Basis_Sicherungen.png}
+	\caption{Basis der Halterung für die Sicherungen}
+	\label{fig:Basis_Sicherungen}
+\end{figure}
+
+Um auch hier die Möglichkeit zu haben verschiedene Sicherungselemente mit Unterschiedlichen Durchmessern ausstellen zu können kann man sog. Adapter (siehe Abb.\ref{fig:Adapter_Sicherungen})in das Loch der Basis steckten. Die Adapter wurden so konstruiert das entweder möglichst viele Details der Sicherung zu sehen sind oder sie den Einsatz dieser Sicherungen andeuten.  
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\linewidth]{Adapter_Sicherungen.png}
+	\caption{Passende Adapter für die Auszustellenden Sicherungen}
+	\label{fig:Adapter_Sicherungen}
+\end{figure}
